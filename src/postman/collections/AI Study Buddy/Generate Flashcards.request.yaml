@@ -1,0 +1,15 @@
+$kind: 'http-request'
+name: 'Generate Flashcards'
+method: POST
+url: 'http://localhost:5000/api/materials/{{material_id}}/flashcards'
+headers:
+  - key: Authorization
+    value: 'Bearer {{token}}'
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "count": 5
+    }
